@@ -50,10 +50,17 @@ public class Person {
     }
 
     public PersonBuilder newChildBuilder(String name) {
-        PersonBuilder child = new PersonBuilder();
-        child.setName(name);
-        child.setSurName(this.surName);
-        return child;
+        return new PersonBuilder()
+                .setName(name)
+                .setSurName(this.surName)
+                .setAge(0)
+                .setCity(this.city);
+    }
+
+    @Override
+    public String toString(){
+        return (name + " " +surName + "\n" + "возраст: " + age + "\n"
+                + "проживает в городе: " + city + "\n");
     }
 
 }

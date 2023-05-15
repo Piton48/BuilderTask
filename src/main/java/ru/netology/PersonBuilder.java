@@ -6,27 +6,31 @@ public class PersonBuilder {
     public int age = -1;
     public String city;
 
-    public void setSurName(String surName) {
+    public PersonBuilder setSurName(String surName) {
         this.surName = surName;
+        return this;
     }
 
-    public void setName(String name) {
+    public PersonBuilder setName(String name) {
         this.name = name;
+        return this;
     }
 
-    public void setAge(int age) {
+    public PersonBuilder setAge(int age) {
         if (age >= 0) {
             this.age = age;
+            return this;
         } else throw new IllegalArgumentException("Возраст не может быть отрицательным!");
     }
 
-    public void setCity(String city) {
+    public PersonBuilder setCity(String city) {
         this.city = city;
+        return this;
     }
 
     public Person build() {
         if (name != null & surName != null) {
             return new Person(name, surName, age, city);
-        } else throw new IllegalArgumentException("На заданны обязательные поля (имя, или фамилия)!");
+        } else throw new IllegalArgumentException("На заданны обязательные поля (имя и/или фамилия)!");
     }
 }
