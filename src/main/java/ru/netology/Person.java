@@ -59,8 +59,8 @@ public class Person {
 
     @Override
     public String toString(){
-        return (name + " " +surName + "\n" + "возраст: " + age + "\n"
-                + "проживает в городе: " + city + "\n");
+        return (name + " " +surName + "\n" + "(возраст: " + age + " "
+                + "проживает в городе: " + city + ")\n");
     }
 
 }

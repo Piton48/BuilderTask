@@ -1,6 +1,6 @@
 package ru.netology;
 
-public class PersonBuilder {
+public class PersonBuilder{
     public String name;
     public String surName;
     public int age = -1;
@@ -31,6 +31,6 @@ public class PersonBuilder {
     public Person build() {
         if (name != null & surName != null) {
             return new Person(name, surName, age, city);
-        } else throw new IllegalArgumentException("На заданны обязательные поля (имя и/или фамилия)!");
+        } else throw new IllegalArgumentException("Не заданны обязательные поля (имя и/или фамилия)!");
     }
 }
