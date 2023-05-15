@@ -3,7 +3,7 @@ package ru.netology;
 public class Person {
     protected final String name;
     protected final String surName;
-    protected int age = -1;
+    protected int age;
     protected String city = null;
 
     public Person(String name, String surName, int age, String city) {
@@ -45,10 +45,16 @@ public class Person {
         } else return true;
     }
 
-    public void setCity(String city){
+    public void setCity(String city) {
         this.city = city;
     }
 
-    
+    public PersonBuilder newChildBuilder(String name) {
+        PersonBuilder child = new PersonBuilder();
+        child.setName(name);
+        child.setSurName(this.surName);
+        return child;
+    }
+
 }
 
