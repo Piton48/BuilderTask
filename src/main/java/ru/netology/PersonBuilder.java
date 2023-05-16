@@ -1,6 +1,6 @@
 package ru.netology;
 
-public class PersonBuilder{
+public class PersonBuilder {
     public String name;
     public String surName;
     public int age = -1;

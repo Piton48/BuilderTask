@@ -4,7 +4,7 @@ public class Person {
     protected final String name;
     protected final String surName;
     protected int age;
-    protected String city = null;
+    protected String city;
 
     public Person(String name, String surName, int age, String city) {
         this.name = name;
@@ -58,8 +58,8 @@ public class Person {
     }
 
     @Override
-    public String toString(){
-        return (name + " " +surName + "\n" + "(возраст: " + age + " "
+    public String toString() {
+        return (name + " " + surName + "\n" + "(возраст: " + age + " "
                 + "проживает в городе: " + city + ")\n");
     }
 

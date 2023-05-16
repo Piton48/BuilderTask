@@ -10,15 +10,15 @@ public class PersonBuilderTest {
     String name = "Вадик";
 
     @Test
-    void setAgeTest(){
+    void setAgeTest() {
         Assertions.assertThrows(IllegalArgumentException.class
-                ,()->builder.setAge(age));
+                , () -> builder.setAge(age));
     }
 
     @Test
-    void buildTest(){
+    void buildTest() {
         Assertions.assertThrows(IllegalArgumentException.class
-                ,()->builder.setName(name).build());
+                , () -> builder.setName(name).build());
     }
 
 }
